@@ -17,7 +17,7 @@ function totalBooksCount(books) {
    return total;
  };
  
- function MostCommonGenres(books) {
+ function mostCommonGenres(books) {
    const booksGenre = [];
    for (let key in books) { booksGenre.push(books[key].genre) };
    const uniqueGenre = [...new Set(booksGenre)];
@@ -32,7 +32,7 @@ function totalBooksCount(books) {
    return bookGenreTotals.slice(0, 5);
  };
  
- function MostPopularBooks(books) {
+ function mostPopularBooks(books) {
    const popularBookTotals = [];
    for (let key in books) {
      popularBookTotals.push({name: books[key].title, count: books[key].borrows.length});
@@ -43,7 +43,7 @@ function totalBooksCount(books) {
    return popularBookTotals.slice(0, 5);
  };
  
- function MostPopularAuthors(books, authors) {
+ function mostPopularAuthors(books, authors) {
      const popularAuthorsTotals = [];
  
    for (let key in authors) {
