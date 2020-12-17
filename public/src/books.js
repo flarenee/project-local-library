@@ -1,4 +1,4 @@
-// eslint-disable-next-line strict
+
 function findAuthorById(authors, id) {
   return authors.find((byId) => byId.id === id);
 };

@@ -18,7 +18,7 @@ function numberOfBorrows(account, books) {
 };
 
 
-function getBooksPossessedByAccount(account, books, authors) {
+function booksInPossession(account, books, authors) {
   let rArr = [];
   for(let key in books) {
     if(books[key].borrows.some(element => element.id === account.id && !element.returned)){
