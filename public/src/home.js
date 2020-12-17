@@ -22,7 +22,7 @@ function totalBooksCount(books) {
    return total;
  };
  
- function MostCommonGenres(books) {
+ function mostCommonGenres(books) {
   let genreArr = [];
   const finalArr = [];
   genreArr = books.map((book) => book.genre);
@@ -39,23 +39,6 @@ function totalBooksCount(books) {
   }
   return finalArr.sort((genreOne, genreTwo) => genreTwo.count < genreOne.count ? -1 : 1).slice(0, 5);
 }
-
-
-
-//  function mostCommonGenres(books) {
-//    const booksGenre = [];
-//    for (let key in books) { booksGenre.push(books[key].genre) };
-//    const uniqueGenre = [...new Set(booksGenre)];
-//    const bookGenreTotals = [];
-//    for (let key in uniqueGenre) {
-//      const genreCount = books.filter(book => book.genre === uniqueGenre[key]).length;
-//      bookGenreTotals.push({'name': uniqueGenre[key], 'count': genreCount});
-//    };
-//    bookGenreTotals.sort(function(item1, item2) {
-//      return item2.count - item1.count;
-//    });
-//    return bookGenreTotals.slice(0, 5);
-//  };
  
  function mostPopularBooks(books) {
    const popularBookTotals = [];
